@@ -9,7 +9,7 @@
       {
         title: "Racebuddy: An Adaptive Playseat for Children with Spina Bifida",
         date: "September 2024 - ",
-        img: "./src/projects/Playseat.jpg",
+        img: "./src/projects/Playseat.JPG",
         desc: "Designed an adaptive, custom-contoured playseat that allows a child with spina bifida to interact with his peers. The design incorporates modular components fitted together with different mechanisms like snap-fits, spring-loaded mechanisms, dovetails, and more.",
         skills: ["CAD","3D Printing","Mechanical Design","Manufacturing"],
       },

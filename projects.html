@@ -2,23 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Chloe Gu</title>
-  <link rel="stylesheet" href="css/projects.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">Fun</a></li>
-      <li class="active"><a href="projects.html">Projects</a></li>
-    </ul>
-  </nav>
-  <main>
-    <div class="projects-list" id="projects-list">
-      <h1>Projects</h1>
-      <h2>Here are some of the projects I've worked on over the years, starting from my Sophomore year in high school.</h2>
+  <header class="site-header">
+    <div class="wrap">
+      <nav>
+        <div class="brand">
+          <div class="blob"><div class="body"></div><div class="eye l"></div><div class="eye r"></div></div>
+          <a class="brand-name" href="index.html#home">chloe gu</a>
+        </div>
+        <ul>
+          <li><a href="index.html#home">home</a></li>
+          <li><a href="index.html#updates">updates</a></li>
+          <li><a class="active" href="projects.html">projects</a></li>
+          <li><a href="index.html#fun">fun</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
+
+  <main class="wrap">
+    <section id="projects">
+      <div class="projects-intro">
+        <div class="card-label" data-content="projectsAll.introLabel"></div>
+        <h1 data-content="projectsAll.introHeading"></h1>
+        <p data-content="projectsAll.introBlurb"></p>
+        <div class="blob projects-blob"><div class="body"></div><div class="eye l"></div><div class="eye r"></div><div class="mouth"></div></div>
+      </div>
+
+      <div class="section-head"><span class="label" data-content="projectsAll.headLabel"></span><span class="meta" data-content="projectsAll.headMeta"></span></div>
+      <div class="projects-list" id="projects-list"></div>
+
+      <a class="see-all" href="index.html#home" data-content="projectsAll.backHome"></a>
+    </section>
+
+    <footer class="site-footer">
+      <div class="left">
+        <div class="blob"><div class="body"></div><div class="eye l"></div><div class="eye r"></div></div>
+        <span data-content="footer.tagline"></span>
+      </div>
+      <span data-content="footer.name"></span>
+    </footer>
   </main>
-  <script src="js/project-script.js"></script>
+
+  <script src="js/content.js"></script>
 </body>
 </html>

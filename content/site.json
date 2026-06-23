@@ -1,0 +1,54 @@
+{
+  "hero": {
+    "eyebrow": "electrical engineering @ duke · embedded & robotics",
+    "heading": "hi, i'm Chloe Gu!",
+    "description": "I'm an aspiring engineer studying Electrical Engineering at Duke. I'm interested in embedded systems and robotics. I love building things, figuring out how things work, and connecting with nature!"
+  },
+  "updates": {
+    "label": "/ updates",
+    "meta": "what i've been up to"
+  },
+  "projectsIndex": {
+    "introLabel": "/ projects",
+    "introHeading": "things i've built",
+    "introBlurb": "A few of the things I'm most proud of. There's plenty more where these came from.",
+    "seeAll": "see all projects →"
+  },
+  "projectsAll": {
+    "introLabel": "/ all projects",
+    "introHeading": "things i've built",
+    "introBlurb": "Everything I've worked on over the years, starting from my sophomore year in high school.",
+    "headLabel": "/ selected work",
+    "headMeta": "2022 — present",
+    "backHome": "← back home"
+  },
+  "fun": {
+    "teaserLabel": "/ off the clock",
+    "teaserTitle": "there's more to me",
+    "teaserSub": "a little about me, plus photography, birding & speedcubing.",
+    "toggle": "things i love →"
+  },
+  "about": {
+    "label": "/ about me",
+    "heading": "a little about me",
+    "body": "Hihi! I'm Chloe. I was born in Austin, Texas, but I spent most of my life in Shanghai, China before going to college (including staying at the same school for 12 years). Like a lot of people, I love travelling and eating good food. But other than that, I always had a lot of hobbies, and some I still keep today are photography (especially birds!) and solving Rubik's cubes."
+  },
+  "hobbiesHead": {
+    "label": "/ things i love",
+    "meta": "off-hours"
+  },
+  "hobbies": {
+    "photography": {
+      "title": "Photography & Birding",
+      "body": "Birding has taken me around the world and parks just right beside my home. I have seen around 400+ species of birds to this day, and some of my most memorable species (that I've seen) are Collared Scops Owl and the Japanese Paradise Flycatcher."
+    },
+    "speedcubing": {
+      "title": "Speedcubing",
+      "body": "I have been speed-solving Rubik's cubes since I was in middle school, and I've known how to solve one since 2nd grade. Currently, I can solve a 3x3 cube in around 7 seconds and 15 seconds one-handed. I've also written tutorials, competed internationally, posted videos online, been a cubing coach, and created Rubik's cube mosaics."
+    }
+  },
+  "footer": {
+    "tagline": "built with curiosity, 2025",
+    "name": "chloe gu"
+  }
+}

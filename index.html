@@ -3,48 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Chloe Gu</title>
-  <link href="css/index.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <title>Chloe Gu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a class='active' href="index.html">Home</a></li>
-      <li><a href="about.html">Fun</a></li>
-      <li><a href="projects.html">Projects</a></li>
-    </ul>
-  </nav>
+  <header class="site-header">
+    <div class="wrap">
+      <nav>
+        <div class="brand">
+          <div class="blob"><div class="body"></div><div class="eye l"></div><div class="eye r"></div></div>
+          <a class="brand-name" href="#home">chloe gu</a>
+        </div>
+        <ul>
+          <li><a href="#home" data-section="home">home</a></li>
+          <li><a href="#updates" data-section="updates">updates</a></li>
+          <li><a href="#projects" data-section="projects">projects</a></li>
+          <li><a href="#fun" data-section="fun">fun</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <main>
-    <div class="postcard">
-      <div class="postcard-text">
-        <h1 class="hello">Hi, I'm Chloe Gu!</h1>
-        <p class="description">
-            I'm an aspiring engineer studying Electrical Engineering at Duke. I'm interested in embedded systems and robotics. I love building things, figuring out how things work, and connecting with nature!
-        </p>
-        <div class="social-bar">
-          <a href="https://github.com/chloeya347" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://linkedin.com/in/chloe-gu137" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="mailto:chloe.gu@duke.edu">
-            <i class="fas fa-envelope"></i>
-          </a>
+  <main class="wrap">
+
+    <!-- HOME -->
+    <section id="home">
+      <div class="hero">
+        <div class="hero-text">
+          <div class="eyebrow" data-content="hero.eyebrow"></div>
+          <h1 class="hello" data-content="hero.heading"></h1>
+          <p class="description" data-content="hero.description"></p>
+          <div class="hero-actions">
+            <a href="#projects" class="portfolio-link">See my work →</a>
+            <div class="hero-social">
+              <a href="https://github.com/chloeya347" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://linkedin.com/in/chloe-gu137" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="mailto:chloe.gu@duke.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-portrait">
+          <img src="./src/me.JPG" alt="Chloe Gu" />
+          <div class="blob hero-blob"><div class="body"></div><div class="eye l"></div><div class="eye r"></div><div class="mouth"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UPDATES -->
+    <section id="updates">
+      <div class="section-head"><span class="label" data-content="updates.label"></span><span class="meta" data-content="updates.meta"></span></div>
+      <div class="updates-card">
+        <!-- Rows are rendered from content/news.txt by js/content.js -->
+        <div class="update-list" id="update-list"></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS (flagship only) -->
+    <section id="projects">
+      <div class="projects-intro">
+        <div class="card-label" data-content="projectsIndex.introLabel"></div>
+        <h1 data-content="projectsIndex.introHeading"></h1>
+        <p data-content="projectsIndex.introBlurb"></p>
+        <div class="blob projects-blob"><div class="body"></div><div class="eye l"></div><div class="eye r"></div><div class="mouth"></div></div>
+      </div>
+
+      <div class="projects-list" id="projects-list" data-filter="flagship"></div>
+
+      <a class="see-all" href="projects.html" data-content="projectsIndex.seeAll"></a>
+    </section>
+
+    <!-- FUN (collapsed, at the end) -->
+    <section id="fun">
+      <div class="fun-teaser">
+        <div>
+          <div class="card-label" data-content="fun.teaserLabel"></div>
+          <div class="fun-teaser-title" data-content="fun.teaserTitle"></div>
+          <p class="fun-teaser-sub" data-content="fun.teaserSub"></p>
+        </div>
+        <button class="reveal-btn" id="fun-toggle" aria-expanded="false" aria-controls="fun-reveal" data-content="fun.toggle"></button>
+      </div>
+
+      <div class="fun-content" id="fun-reveal" hidden>
+        <div class="about-intro">
+          <div class="card-label" data-content="about.label"></div>
+          <h1 data-content="about.heading"></h1>
+          <p data-content="about.body"></p>
+          <div class="blob intro-blob"><div class="body"></div><div class="eye l"></div><div class="eye r"></div></div>
         </div>
 
-        <a href="projects.html" class="portfolio-link">See My Work</a>
-       
-      </div>
-      <div class="postcard-image">
-        <!-- Replace with your PNG -->
-        <img src="./src/me.JPG" alt="Your Portrait or Illustration" />
-      </div>
-    </div>
-  </main>
-  
-</body>
+        <div class="section-head"><span class="label" data-content="hobbiesHead.label"></span><span class="meta" data-content="hobbiesHead.meta"></span></div>
 
+        <div class="hobbies">
+          <article class="hobby-card">
+            <h2 data-content="hobbies.photography.title"></h2>
+            <p data-content="hobbies.photography.body"></p>
+            <div class="photo-grid">
+              <img src="./src/photos/1.jpg" alt="Bird photo 1">
+              <img src="./src/photos/2.jpg" alt="Bird photo 2">
+              <img src="./src/photos/3.jpg" alt="Bird photo 3">
+              <img src="./src/photos/4.jpg" alt="Bird photo 4">
+            </div>
+          </article>
+
+          <article class="hobby-card">
+            <h2 data-content="hobbies.speedcubing.title"></h2>
+            <p data-content="hobbies.speedcubing.body"></p>
+            <div class="photo-grid">
+              <img src="./src/cubing/1.jpg" alt="Cubing photo 1">
+              <img src="./src/cubing/2.jpg" alt="Cubing photo 2">
+              <img src="./src/cubing/3.png" alt="Cubing photo 3">
+              <img src="./src/cubing/4.jpg" alt="Cubing photo 4">
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="left">
+        <div class="blob"><div class="body"></div><div class="eye l"></div><div class="eye r"></div></div>
+        <span data-content="footer.tagline"></span>
+      </div>
+      <span data-content="footer.name"></span>
+    </footer>
+
+  </main>
+
+  <script src="js/content.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/hobbies.js"></script>
+</body>
 </html>

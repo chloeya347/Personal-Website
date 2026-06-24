@@ -36,14 +36,16 @@
         <div class="hero-text">
           <div class="eyebrow" data-content="hero.eyebrow"></div>
           <h1 class="hello" data-content="hero.heading"></h1>
-          <p class="description" data-content="hero.description"></p>
+          <p class="description" data-content="hero.description1"></p>
+          <p class="description" data-content="hero.description2"></p>
+          <p class="description" data-content="hero.description3"></p>
           <div class="hero-actions">
-            <a href="#projects" class="portfolio-link">See my work →</a>
             <div class="hero-social">
               <a href="https://github.com/chloeya347" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
               <a href="https://linkedin.com/in/chloe-gu137" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
               <a href="mailto:chloe.gu@duke.edu" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
+            <a href="#projects" class="portfolio-link">See my work →</a>
           </div>
         </div>
         <div class="hero-portrait">
@@ -62,16 +64,18 @@
       </div>
     </section>
 
-    <!-- PROJECTS (flagship only) -->
+    <!-- PROJECTS (flagship only) — intro + flagship cards live in one block -->
     <section id="projects">
-      <div class="projects-intro">
-        <div class="card-label" data-content="projectsIndex.introLabel"></div>
-        <h1 data-content="projectsIndex.introHeading"></h1>
-        <p data-content="projectsIndex.introBlurb"></p>
-        <div class="blob projects-blob"><div class="body"></div><div class="eye l"></div><div class="eye r"></div><div class="mouth"></div></div>
-      </div>
+      <div class="projects-block">
+        <div class="projects-intro">
+          <div class="card-label" data-content="projectsIndex.introLabel"></div>
+          <h1 data-content="projectsIndex.introHeading"></h1>
+          <p data-content="projectsIndex.introBlurb"></p>
+          <div class="blob projects-blob"><div class="body"></div><div class="eye l"></div><div class="eye r"></div><div class="mouth"></div></div>
+        </div>
 
-      <div class="projects-list" id="projects-list" data-filter="flagship"></div>
+        <div class="projects-list" id="projects-list" data-filter="flagship"></div>
+      </div>
 
       <a class="see-all" href="projects.html" data-content="projectsIndex.seeAll"></a>
     </section>

@@ -1,8 +1,10 @@
 {
   "hero": {
-    "eyebrow": "electrical engineering @ duke · embedded & robotics",
+    "eyebrow": "Self-Acclaimed Roboticist and Full-stack Engineer (HW and SW), ECE @ Duke",
     "heading": "hi, i'm Chloe Gu!",
-    "description": "I'm an aspiring engineer studying Electrical Engineering at Duke. I'm interested in embedded systems and robotics. I love building things, figuring out how things work, and connecting with nature!"
+    "description1": "I'm a self-acclaimed roboticist and full-stack engineer (HW and SW) studying Electrical Engineering at Duke. Other than robotics, I'm interested in building little gadgets and tinkering with hardware / code.",
+    "description2": "My ultimate goal for robots that solve real problems—starting in industrial automation and eventually becoming part of everyday life. Beyond that, I wish they can have human level dexterity and be able to interact with the world like humans do. In research, I'm exploring how robots can learn from humans, model contact-rich interaction, and transfer skills from simulation to the real world.",
+    "description3": "Some of my hobbies include birding, speedcubing, and photography. Feel free to reach out to me at chloe [dot] gu [at] duke [dot] edu!"
   },
   "updates": {
     "label": "/ updates",

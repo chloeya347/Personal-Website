@@ -128,7 +128,7 @@ nav ul a.active {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
   gap: 40px;
-  align-items: center;
+  align-items: stretch;
   overflow: hidden;
   margin-top: 8px;
 }
@@ -136,8 +136,8 @@ nav ul a.active {
 .eyebrow { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
 
 .hello {
-  font-size: 46px;
-  line-height: 1.14;
+  font-size: 40px;
+  line-height: 1.16;
   font-weight: 600;
   letter-spacing: -0.02em;
   margin: 0;
@@ -145,11 +145,19 @@ nav ul a.active {
 }
 
 .description {
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.65;
   color: var(--ink-soft);
-  margin: 22px 0 28px;
+  margin: 0 0 14px;
   max-width: 520px;
+}
+
+.description:first-of-type {
+  margin-top: 22px;
+}
+
+.description:last-of-type {
+  margin-bottom: 28px;
 }
 
 .portfolio-link {
@@ -165,8 +173,8 @@ nav ul a.active {
 }
 .portfolio-link:hover { transform: translateY(-2px); }
 
-.hero-portrait { position: relative; justify-self: center; }
-.hero-portrait img { width: 240px; height: 280px; object-fit: cover; border-radius: 28px; }
+.hero-portrait { position: relative; justify-self: stretch; display: flex; }
+.hero-portrait img { width: 100%; height: 100%; min-height: 360px; object-fit: cover; border-radius: 28px; }
 
 .hero-blob {
   position: absolute;
@@ -177,7 +185,7 @@ nav ul a.active {
 .hero-blob .body { background: var(--mint); }
 
 /* hero actions: CTA + contact icons (contact lives in the first block) */
-.hero-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.hero-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
 
 .hero-social { display: flex; align-items: center; gap: 10px; }
 .hero-social a {
@@ -311,12 +319,30 @@ nav ul a.active {
 .photo-grid img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 14px; }
 
 /* ===== PROJECTS ===== */
+/* Index home: the intro header and the flagship cards are wrapped together in
+   one .projects-block card so they read as a single block. projects.html has
+   no .projects-block, so its intro/cards keep their own card styling and the
+   scoped overrides below don't touch it. */
+.projects-block {
+  background: var(--card);
+  border-radius: 24px;
+  padding: 40px 44px;
+  position: relative;
+}
+
 .projects-intro {
   position: relative;
   background: var(--card);
   border-radius: 24px;
   padding: 48px 56px;
   overflow: hidden;
+}
+/* Inside the merged block the intro is just the heading — strip its card chrome. */
+.projects-block .projects-intro {
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
 }
 .projects-intro h1 { font-size: 36px; font-weight: 600; letter-spacing: -0.02em; margin: 0 0 16px; }
 .projects-intro p { font-size: 16px; line-height: 1.7; color: var(--ink-soft); margin: 0; max-width: 600px; }
@@ -329,12 +355,12 @@ nav ul a.active {
   animation: floaty 6s ease-in-out infinite;
 }
 .projects-blob .body { background: var(--peach); }
+/* Keep the blob beside the heading rather than centered over the tall block. */
+.projects-block .projects-blob { right: 8px; }
 
 .projects-list { display: flex; flex-direction: column; gap: 14px; }
-/* When the flagship list follows the intro directly (no section divider),
-   keep them reading as one block with a modest gap. Index page only — on
-   projects.html a .section-head sits between, so this selector won't match. */
-.projects-intro + .projects-list { margin-top: 24px; }
+/* Inside the block the cards stack flush and separate with soft lines. */
+.projects-block .projects-list { gap: 0; margin-top: 24px; }
 
 .project-card {
   display: grid;
@@ -347,6 +373,17 @@ nav ul a.active {
   transition: transform .18s ease;
 }
 .project-card:hover { transform: translateY(-3px); }
+/* Inside the merged block, cards drop their own white background and become
+   flush rows divided by soft lines (so they aren't cards-on-a-card). The skill
+   pills and image keep their --cream fill against the white block. */
+.projects-block .project-card {
+  background: none;
+  border-radius: 0;
+  padding: 24px 0;
+}
+.projects-block .project-card:hover { transform: none; }
+.projects-block .project-card:first-child { padding-top: 0; }
+.projects-block .project-card + .project-card { border-top: 1px solid var(--cream); }
 
 .project-img {
   width: 100%;
@@ -402,6 +439,7 @@ nav ul a.active {
   .about-intro { padding: 36px 28px; }
   .hobbies { grid-template-columns: 1fr; }
   .hobby-card { padding: 28px; }
+  .projects-block { padding: 28px 22px; }
   .projects-intro { padding: 36px 28px; }
   .projects-blob { display: none; }
   .project-card { grid-template-columns: 1fr; }

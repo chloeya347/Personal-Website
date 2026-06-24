@@ -43,7 +43,7 @@ async function loadUpdates() {
       d.textContent = date ? `[${date}]` : '';
       const t = document.createElement('div');
       t.className = 'update-text';
-      t.textContent = text;
+      t.innerHTML = text;
       row.append(d, t);
       return row;
     });
